@@ -1,4 +1,5 @@
 import 'package:adaptive_dash_board/models/drawer_model.dart';
+import 'package:adaptive_dash_board/models/user_info_model.dart';
 import 'package:adaptive_dash_board/utils/styles/app_images.dart';
 import 'package:adaptive_dash_board/widgets/activer_and_inactive_item.dart';
 import 'package:adaptive_dash_board/widgets/drawer_items_list_view.dart';
@@ -15,9 +16,19 @@ class CustomDrawer extends StatelessWidget {
       child: CustomScrollView(
         slivers: [
           const SliverToBoxAdapter(
-            child: UserInfoListTile(
-              title: 'Lekan Okeowo',
-              subTitle: 'demo@gmail.com',
+            child: SizedBox(
+              height: 10,
+            ),
+          ),
+          const SliverToBoxAdapter(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 28),
+              child: UserInfoListTile(
+                userInfoModel: UserInfoModel(
+                    title: 'Lekan Okeowo',
+                    subTitle: 'demo@gmail.com',
+                    iamge: Assets.imagesAvater3),
+              ),
             ),
           ),
           const SliverToBoxAdapter(child: DrawerItemsListView()),
@@ -30,7 +41,7 @@ class CustomDrawer extends StatelessWidget {
             hasScrollBody: false,
             child: Column(
               children: [
-                const Expanded(child: SizedBox()),
+                const Expanded(child: SizedBox(height: 20)),
                 InActiveItem(
                   drawerItemModel: DrawerItemModel(
                       title: 'Setting system', image: Assets.imagesSetting),

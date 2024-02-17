@@ -1,6 +1,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesArrowDown
+  /// asstes/images/arrow-down.svg
+  static const String imagesArrowDown = "asstes/images/arrow-down.svg";
+
   /// Assets for imagesAvater1
   /// asstes/images/avater_1.svg
   static const String imagesAvater1 = "asstes/images/avater_1.svg";
@@ -40,6 +44,10 @@ class Assets {
   /// Assets for imagesLogout
   /// asstes/images/logout.svg
   static const String imagesLogout = "asstes/images/logout.svg";
+
+  /// Assets for imagesMoneys
+  /// asstes/images/moneys.svg
+  static const String imagesMoneys = "asstes/images/moneys.svg";
 
   /// Assets for imagesMyInvestment
   /// asstes/images/my_investment.svg
