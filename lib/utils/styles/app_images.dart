@@ -25,6 +25,10 @@ class Assets {
   /// asstes/images/card_frame.svg
   static const String imagesCardFrame = "asstes/images/card_frame.svg";
 
+  /// Assets for imagesCategoryImage
+  /// asstes/images/category_image.svg
+  static const String imagesCategoryImage = "asstes/images/category_image.svg";
+
   /// Assets for imagesDashBoard
   /// asstes/images/dashBoard.svg
   static const String imagesDashBoard = "asstes/images/dashBoard.svg";
@@ -36,6 +40,10 @@ class Assets {
   /// Assets for imagesFrame
   /// asstes/images/Frame.svg
   static const String imagesFrame = "asstes/images/Frame.svg";
+
+  /// Assets for imagesGallery
+  /// asstes/images/gallery.svg
+  static const String imagesGallery = "asstes/images/gallery.svg";
 
   /// Assets for imagesIncome
   /// asstes/images/income.svg
@@ -56,6 +64,10 @@ class Assets {
   /// Assets for imagesMyTransaction
   /// asstes/images/my_transaction.svg
   static const String imagesMyTransaction = "asstes/images/my_transaction.svg";
+
+  /// Assets for imagesMycardBackground
+  /// asstes/images/mycard_background.png
+  static const String imagesMycardBackground = "asstes/images/mycard_background.png";
 
   /// Assets for imagesSetting
   /// asstes/images/setting.svg
