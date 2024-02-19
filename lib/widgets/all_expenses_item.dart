@@ -10,7 +10,7 @@ class AllExpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedCrossFade(
-      duration: const Duration(milliseconds: 700),
+      duration: const Duration(milliseconds: 500),
       crossFadeState:
           isActive ? CrossFadeState.showFirst : CrossFadeState.showSecond,
       firstChild: isActive

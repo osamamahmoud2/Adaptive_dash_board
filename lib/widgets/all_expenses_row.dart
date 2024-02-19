@@ -13,7 +13,7 @@ class AllExpensesRow extends StatefulWidget {
 
 int selecteditem = 0;
 
-final items = [
+final List<AllExpenesesItemModel> items = [
   const AllExpenesesItemModel(
       icon: Assets.imagesBalance,
       title: 'Balance',

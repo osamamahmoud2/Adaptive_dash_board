@@ -25,22 +25,12 @@ class LatestTransactionListView extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: items
-            .map((e) =>
-                IntrinsicWidth(child: UserInfoListTile(userInfoModel: e)))
+            .asMap()
+            .entries
+            .map((e) => IntrinsicWidth(
+                child: UserInfoListTile(userInfoModel: items[e.key])))
             .toList(),
       ),
     );
-
-    // SizedBox(
-    //   height: 80,
-    //   child: ListView.builder(
-    //       shrinkWrap: true,
-    //       scrollDirection: Axis.horizontal,
-    //       itemCount: items.length,
-    //       itemBuilder: ((context, index) {
-    //         return IntrinsicWidth(
-    //             child: UserInfoListTile(userInfoModel: items[index]));
-    //       })),
-    // );
   }
 }

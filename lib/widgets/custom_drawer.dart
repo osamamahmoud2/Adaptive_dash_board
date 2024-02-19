@@ -32,11 +32,6 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           const SliverToBoxAdapter(child: DrawerItemsListView()),
-          const SliverToBoxAdapter(
-            child: SizedBox(
-              height: 10,
-            ),
-          ),
           SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
