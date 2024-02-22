@@ -27,37 +27,48 @@ class InActiveAllExpensesItem extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CircleAvatar(
-                  backgroundColor: const Color(0XffFAFAFA),
-                  radius: 30,
-                  child: SvgPicture.asset(
-                    allExpenesesItemModel.icon,
-                    color: const Color(0Xff4EB7F2), //DOTO:
+                Flexible(
+                  child: CircleAvatar(
+                    backgroundColor: const Color(0XffFAFAFA),
+                    radius: 30,
+                    child: SvgPicture.asset(
+                      allExpenesesItemModel.icon,
+                      color: const Color(0Xff4EB7F2), //DOTO:
+                    ),
                   ),
                 ),
-                const Icon(Icons.arrow_forward_ios)
+                const Flexible(child: Icon(Icons.arrow_forward_ios))
               ],
             ),
             const SizedBox(
               height: 34,
             ),
-            Text(
-              allExpenesesItemModel.title,
-              style: Appstyles.styleSemiBold16(context: context),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpenesesItemModel.title,
+                style: Appstyles.styleSemiBold16(context: context),
+              ),
             ),
             const SizedBox(
               height: 34,
             ),
-            Text(
-              allExpenesesItemModel.date,
-              style: Appstyles.styleRegular14(context: context),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpenesesItemModel.date,
+                style: Appstyles.styleRegular14(context: context),
+              ),
             ),
             const SizedBox(
               height: 16,
             ),
-            Text(
-              allExpenesesItemModel.price,
-              style: Appstyles.styleSemiBold24(context: context),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpenesesItemModel.price,
+                style: Appstyles.styleSemiBold24(context: context),
+              ),
             ),
           ],
         ));
@@ -88,40 +99,56 @@ class ActiveAllExpensesItem extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CircleAvatar(
-                  backgroundColor: const Color(0XffFFFFFF).withOpacity(0.1),
-                  radius: 30,
-                  child: SvgPicture.asset(
-                    allExpenesesItemModel.icon,
-                    color: const Color(0XffFFFFFF), //DOTO:
+                Flexible(
+                  child: CircleAvatar(
+                    backgroundColor: const Color(0XffFFFFFF).withOpacity(0.1),
+                    radius: 30,
+                    child: SvgPicture.asset(
+                      allExpenesesItemModel.icon,
+                      color: const Color(0XffFFFFFF), //DOTO:
+                    ),
                   ),
                 ),
-                const Icon(
-                  Icons.arrow_forward_ios,
-                  color: Colors.white,
+                const Flexible(
+                  child: Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.white,
+                  ),
                 )
               ],
             ),
             const SizedBox(
               height: 34,
             ),
-            Text(
-              allExpenesesItemModel.title,
-              style: Appstyles.styleSemiBold16(context: context).copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpenesesItemModel.title,
+                style: Appstyles.styleSemiBold16(context: context)
+                    .copyWith(color: Colors.white),
+              ),
             ),
             const SizedBox(
               height: 34,
             ),
-            Text(
-              allExpenesesItemModel.date,
-              style: Appstyles.styleRegular14(context: context).copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpenesesItemModel.date,
+                style: Appstyles.styleRegular14(context: context)
+                    .copyWith(color: Colors.white),
+              ),
             ),
             const SizedBox(
               height: 16,
             ),
-            Text(
-              allExpenesesItemModel.price,
-              style: Appstyles.styleSemiBold24(context: context).copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpenesesItemModel.price,
+                style: Appstyles.styleSemiBold24(context: context)
+                    .copyWith(color: Colors.white),
+              ),
             ),
           ],
         ));
