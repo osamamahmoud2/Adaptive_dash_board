@@ -10,17 +10,14 @@ class AllExpensesAndQuickInvoiceSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SingleChildScrollView(
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 40),
-        child: Column(
-          children: [
-            AllExpenses(),
-            SizedBox(
-              height: 24,
-            ),
-            QuickInvoice(),
-          ],
-        ),
+      child: Column(
+        children: [
+          AllExpenses(),
+          SizedBox(
+            height: 24,
+          ),
+          QuickInvoice(),
+        ],
       ),
     );
   }

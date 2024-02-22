@@ -18,5 +18,5 @@ class InComeDetailsList extends StatelessWidget {
     return Column(
       children: items.map((e) => IncomeDetails(inComeDetailsModel: e)).toList(),
     );
-  }
+}
 }

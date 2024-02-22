@@ -29,14 +29,14 @@ class _InComeChartState extends State<InComeChart> {
         sections: [
           PieChartSectionData(
             showTitle: false,
-            radius: currentIndex == 0 ? 50 : 40,
+            radius: currentIndex == 0 ? 40 : 30,
             value: 40,
             color: const Color(
               0XFF208CC8,
             ),
           ),
           PieChartSectionData(
-            radius: currentIndex == 1 ? 50 : 40,
+            radius: currentIndex == 1 ? 40 : 30,
             showTitle: false,
             value: 25,
             color: const Color(
@@ -44,7 +44,7 @@ class _InComeChartState extends State<InComeChart> {
             ),
           ),
           PieChartSectionData(
-            radius: currentIndex == 2 ? 50 : 40,
+            radius: currentIndex == 2 ? 40 : 30,
             showTitle: false,
             value: 20,
             color: const Color(
@@ -52,7 +52,7 @@ class _InComeChartState extends State<InComeChart> {
             ),
           ),
           PieChartSectionData(
-            radius: currentIndex == 3 ? 50 : 40,
+            radius: currentIndex == 3 ? 40 : 30,
             showTitle: false,
             value: 22,
             color: const Color(

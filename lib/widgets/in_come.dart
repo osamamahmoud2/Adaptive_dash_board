@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:adaptive_dash_board/widgets/custom_header.dart';
 import 'package:adaptive_dash_board/widgets/cutsom_back_ground_container.dart';
 import 'package:adaptive_dash_board/widgets/in_come_cart.dart';
@@ -18,19 +20,44 @@ class InCome extends StatelessWidget {
           SizedBox(
             height: 16,
           ),
-          IntrinsicHeight(
-            child: Row(
-              children: [
-                Expanded(child: InComeChart()),
-                SizedBox(
-                  width: 20,
-                ),
-                Expanded(child: InComeDetailsList())
-              ],
-            ),
-          )
+          InComeWidget()
         ],
       )),
     );
+  }
+}
+
+class InComeWidget extends StatelessWidget {
+  const InComeWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+
+    if (MediaQuery.sizeOf(context).width < 1756.666748046875 &&
+        MediaQuery.sizeOf(context).width > 1200) {
+      return const IntrinsicHeight(
+        child: Column(
+          children: [
+            Expanded(child: InComeChart()),
+            SizedBox(
+              height: 20,
+            ),
+            Expanded(child: InComeDetailsList())
+          ],
+        ),
+      );
+    } else {
+      return const IntrinsicHeight(
+        child: Row(
+          children: [
+            Expanded(child: InComeChart()),
+            SizedBox(
+              width: 20,
+            ),
+            Expanded(child: InComeDetailsList())
+          ],
+        ),
+      );
+    }
   }
 }
