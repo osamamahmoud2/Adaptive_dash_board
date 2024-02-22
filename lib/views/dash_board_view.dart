@@ -1,11 +1,9 @@
 import 'package:adaptive_dash_board/widgets/adaptive_layout.dart';
-import 'package:adaptive_dash_board/widgets/all_expenses_and_quick_invoice_section.dart';
 import 'package:adaptive_dash_board/widgets/custom_drawer.dart';
 import 'package:adaptive_dash_board/widgets/dash_board_desktop_layout.dart';
 import 'package:adaptive_dash_board/widgets/dash_board_mobile_layout.dart';
 import 'package:adaptive_dash_board/widgets/dash_board_tablet_layout.dart';
-import 'package:adaptive_dash_board/widgets/my_card.dart';
-import 'package:adaptive_dash_board/widgets/my_card_and_in_come_section.dart';
+
 import 'package:flutter/material.dart';
 
 class DashBoardView extends StatelessWidget {
@@ -20,7 +18,7 @@ class DashBoardView extends StatelessWidget {
         key: scaffoldkey,
         appBar: MediaQuery.sizeOf(context).width < 800
             ? AppBar(
-                // backgroundColor: ,
+                backgroundColor: const Color(0xffFAFAFA).withGreen(255),
                 leading: GestureDetector(
                     onTap: () {
                       scaffoldkey.currentState!.openDrawer();

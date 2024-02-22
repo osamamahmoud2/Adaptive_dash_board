@@ -17,9 +17,9 @@ class DateOptions extends StatelessWidget {
               side: const BorderSide(width: 1, color: Color(0xffF1F1F1)))),
       child: Row(
         children: [
-          const Text(
+           Text(
             'Monthly',
-            style: Appstyles.styleSemiBold16,
+            style: Appstyles.styleSemiBold16(context: context),
           ),
           const SizedBox(
             width: 18,

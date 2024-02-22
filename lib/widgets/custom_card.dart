@@ -1,5 +1,3 @@
-
-
 import 'package:adaptive_dash_board/utils/styles/app_images.dart';
 import 'package:adaptive_dash_board/utils/styles/app_styles.dart';
 import 'package:flutter/material.dart';
@@ -29,13 +27,12 @@ class CustomCard extends StatelessWidget {
                   const EdgeInsets.only(left: 31, right: 42, top: 16),
               title: Text(
                 'Name card',
-                style:
-                    Appstyles.styleRegular16.copyWith(color: Colors.white),
+                style: Appstyles.styleRegular16(context: context)
+                    .copyWith(color: Colors.white),
               ),
               subtitle: Text(
                 'Syah Bandi',
-                style:
-                    Appstyles.styleMeduim20.copyWith(color: Colors.white),
+                style: Appstyles.styleMeduim20(context: context).copyWith(color: Colors.white),
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
@@ -44,8 +41,7 @@ class CustomCard extends StatelessWidget {
               padding: const EdgeInsets.only(right: 24),
               child: Text(
                 '0918 8124 0042 8129',
-                style:
-                    Appstyles.styleSemiBold24.copyWith(color: Colors.white),
+                style: Appstyles.styleSemiBold24(context: context).copyWith(color: Colors.white),
               ),
             ),
             const SizedBox(
@@ -55,8 +51,7 @@ class CustomCard extends StatelessWidget {
               padding: const EdgeInsets.only(right: 24),
               child: Text(
                 '12/20 - 124',
-                style:
-                    Appstyles.styleRegular16.copyWith(color: Colors.white),
+                style: Appstyles.styleRegular16(context: context).copyWith(color: Colors.white),
               ),
             ),
             const SizedBox(

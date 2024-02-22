@@ -12,7 +12,7 @@ class CustomHeader extends StatelessWidget {
       children: [
         Text(
           headerTitle,
-          style: Appstyles.styleSemiBold20,
+          style: Appstyles.styleSemiBold20(context: context),
         ),
         const DateOptions()
       ],

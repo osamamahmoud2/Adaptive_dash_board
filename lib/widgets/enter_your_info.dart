@@ -17,7 +17,7 @@ class EnterYourInfoItem extends StatelessWidget {
       children: [
         Text(
           enterYourInfoModel.textFileldTitle,
-          style: Appstyles.styleRegular16,
+          style: Appstyles.styleRegular16(context:  context),
         ),
         const SizedBox(
           height: 12,

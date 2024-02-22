@@ -18,7 +18,7 @@ class InActiveItem extends StatelessWidget {
       leading: SvgPicture.asset(
         drawerItemModel.image,
       ),
-      title: Text(drawerItemModel.title, style: Appstyles.styleSemiBold16),
+      title: Text(drawerItemModel.title, style: Appstyles.styleSemiBold16(context: context)),
     );
   }
 }
@@ -37,7 +37,7 @@ class ActiveItem extends StatelessWidget {
       leading: SvgPicture.asset(
         drawerItemModel.image,
       ),
-      title: Text(drawerItemModel.title, style: Appstyles.styleBold16),
+      title: Text(drawerItemModel.title, style: Appstyles.styleBold16(context: context)),
       trailing: Container(
         width: 3.27,
         color: const Color(0Xff4EB7F2),

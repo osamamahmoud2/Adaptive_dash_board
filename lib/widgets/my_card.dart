@@ -57,9 +57,9 @@ class _MyCardState extends State<MyCard> {
           child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+           Text(
             'My Card',
-            style: Appstyles.styleSemiBold20,
+            style: Appstyles.styleSemiBold20(context: context),
           ),
           const SizedBox(
             height: 20,
@@ -79,19 +79,19 @@ class _MyCardState extends State<MyCard> {
           ),
           ListTile(
             contentPadding: EdgeInsets.zero,
-            title: const Text(
+            title:  Text(
               'Transaction History',
-              style: Appstyles.styleSemiBold20,
+              style: Appstyles.styleSemiBold20(context: context),
             ),
             trailing: Text(
               'see all',
-              style: Appstyles.styleRegular16
+              style: Appstyles.styleRegular16(context: context)
                   .copyWith(color: const Color(0Xff4EB7F2)),
             ),
           ),
           Text(
             '13 April 2022',
-            style: Appstyles.styleRegular16.copyWith(
+            style: Appstyles.styleRegular16(context: context).copyWith(
               color: const Color(0XFFAAAAAA),
             ),
           ),

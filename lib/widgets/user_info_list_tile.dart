@@ -5,9 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class UserInfoListTile extends StatelessWidget {
-  const UserInfoListTile(
-      {super.key, required this.userInfoModel, });
-final UserInfoModel userInfoModel;
+  const UserInfoListTile({
+    super.key,
+    required this.userInfoModel,
+  });
+  final UserInfoModel userInfoModel;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -15,8 +17,10 @@ final UserInfoModel userInfoModel;
       color: const Color(0XFFFAFAFA),
       child: ListTile(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        title: Text(userInfoModel.title, style: Appstyles.styleSemiBold16),
-        subtitle: Text(userInfoModel.subTitle, style: Appstyles.styleRegular12),
+        title: Text(userInfoModel.title,
+            style: Appstyles.styleSemiBold16(context: context)),
+        subtitle: Text(userInfoModel.subTitle,
+            style: Appstyles.styleRegular12(context: context)),
         leading: SvgPicture.asset(userInfoModel.iamge),
       ),
     );

@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:adaptive_dash_board/utils/config_size.dart';
 import 'package:adaptive_dash_board/widgets/custom_header.dart';
 import 'package:adaptive_dash_board/widgets/cutsom_back_ground_container.dart';
 import 'package:adaptive_dash_board/widgets/in_come_cart.dart';
@@ -32,9 +33,11 @@ class InComeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    if (MediaQuery.sizeOf(context).width < 1756.666748046875 &&
-        MediaQuery.sizeOf(context).width > 1200) {
+    log(MediaQuery.sizeOf(context).width.toString());
+    if (MediaQuery.sizeOf(context).width <= 1792 &&
+            MediaQuery.sizeOf(context).width > SizeConfig.tabletBreakPoint ||
+        MediaQuery.sizeOf(context).width <= 512 ||
+        MediaQuery.sizeOf(context).width <= 640) {
       return const IntrinsicHeight(
         child: Column(
           children: [

@@ -35,9 +35,9 @@ class QuickInvoice extends StatelessWidget {
         const SizedBox(
           height: 24,
         ),
-        const Text(
+        Text(
           'Latest Transaction',
-          style: Appstyles.styleRegular16,
+          style: Appstyles.styleRegular16(context: context),
         ),
         const SizedBox(
           height: 12,
@@ -63,17 +63,17 @@ class QuickInvoice extends StatelessWidget {
                 child: CustomBotton(
               text: 'Add more details',
               color: Colors.white,
-              style: Appstyles.styleSemiBold18
+              style: Appstyles.styleSemiBold18(context: context)
                   .copyWith(color: const Color(0XFF4EB7F2)),
             )),
             const SizedBox(
               width: 24,
             ),
-            const Expanded(
+            Expanded(
                 child: CustomBotton(
               text: 'Send Money',
-              color: Color(0XFF4EB7F2),
-              style: Appstyles.styleSemiBold18,
+              color: const Color(0XFF4EB7F2),
+              style: Appstyles.styleSemiBold18(context: context),
             ))
           ],
         )

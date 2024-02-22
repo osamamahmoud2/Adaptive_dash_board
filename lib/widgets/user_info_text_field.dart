@@ -14,8 +14,8 @@ class UserInputTextField extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
           hintText: enterYourInfoModel.textFileldHintText,
-          hintStyle:
-              Appstyles.styleRegular16.copyWith(color: const Color(0XffAAAAAA)),
+          hintStyle: Appstyles.styleRegular16(context: context)
+              .copyWith(color: const Color(0XffAAAAAA)),
           filled: true,
           fillColor: const Color(0XffFAFAFA),
           border: OutlineInputBorder(

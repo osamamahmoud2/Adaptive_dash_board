@@ -17,9 +17,9 @@ class IncomeDetails extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
             color: inComeDetailsModel.color),
       ),
-      title: Text(inComeDetailsModel.title, style: Appstyles.styleRegular16),
+      title: Text(inComeDetailsModel.title, style: Appstyles.styleRegular16(context: context)),
       trailing: Text(inComeDetailsModel.triling,
-          style: Appstyles.styleRegular16.copyWith(
+          style: Appstyles.styleRegular16(context: context).copyWith(
               fontWeight: FontWeight.w500, color: const Color(0XFF208CC8))),
     );
   }
