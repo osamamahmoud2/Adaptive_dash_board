@@ -1,4 +1,3 @@
-import 'package:adaptive_dash_board/models/drawer_model.dart';
 import 'package:adaptive_dash_board/models/user_info_model.dart';
 import 'package:adaptive_dash_board/utils/styles/app_images.dart';
 import 'package:adaptive_dash_board/widgets/activer_and_inactive_item.dart';
@@ -13,14 +12,14 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: CustomScrollView(
+      child: const CustomScrollView(
         slivers: [
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: SizedBox(
               height: 10,
             ),
           ),
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 28),
               child: UserInfoListTile(
@@ -31,21 +30,17 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
           ),
-          const SliverToBoxAdapter(child: DrawerItemsListView()),
+          SliverToBoxAdapter(child: DrawerItemsListView()),
           SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
               children: [
-                const Expanded(child: SizedBox(height: 20)),
+                Expanded(child: SizedBox(height: 20)),
                 InActiveItem(
-                  drawerItemModel: DrawerItemModel(
-                      title: 'Setting system', image: Assets.imagesSetting),
-                ),
+                    title: 'Setting system', image: Assets.imagesSetting),
                 InActiveItem(
-                  drawerItemModel: DrawerItemModel(
-                      title: 'Logout account', image: Assets.imagesLogout),
-                ),
-                const SizedBox(
+                    title: 'Logout account', image: Assets.imagesLogout),
+                SizedBox(
                   height: 48,
                 )
               ],

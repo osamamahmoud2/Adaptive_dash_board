@@ -4,10 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class InActiveAllExpensesItem extends StatelessWidget {
-  const InActiveAllExpensesItem(
-      {super.key, required this.allExpenesesItemModel});
-  final AllExpenesesItemModel allExpenesesItemModel;
+  const InActiveAllExpensesItem({
+    super.key,
+    required this.icon,
+    required this.title,
+    required this.date,
+    required this.price,
+  });
 
+  final String icon, title, date, price;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,7 +37,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
                     backgroundColor: const Color(0XffFAFAFA),
                     radius: 30,
                     child: SvgPicture.asset(
-                      allExpenesesItemModel.icon,
+                      icon,
                       color: const Color(0Xff4EB7F2), //DOTO:
                     ),
                   ),
@@ -46,7 +51,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
             FittedBox(
               fit: BoxFit.scaleDown,
               child: Text(
-                allExpenesesItemModel.title,
+                title,
                 style: Appstyles.styleSemiBold16(context: context),
               ),
             ),
@@ -56,7 +61,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
             FittedBox(
               fit: BoxFit.scaleDown,
               child: Text(
-                allExpenesesItemModel.date,
+                date,
                 style: Appstyles.styleRegular14(context: context),
               ),
             ),
@@ -66,7 +71,7 @@ class InActiveAllExpensesItem extends StatelessWidget {
             FittedBox(
               fit: BoxFit.scaleDown,
               child: Text(
-                allExpenesesItemModel.price,
+                price,
                 style: Appstyles.styleSemiBold24(context: context),
               ),
             ),
@@ -76,9 +81,15 @@ class InActiveAllExpensesItem extends StatelessWidget {
 }
 
 class ActiveAllExpensesItem extends StatelessWidget {
-  const ActiveAllExpensesItem({super.key, required this.allExpenesesItemModel});
-  final AllExpenesesItemModel allExpenesesItemModel;
+  const ActiveAllExpensesItem({
+    super.key,
+    required this.icon,
+    required this.title,
+    required this.date,
+    required this.price,
+  });
 
+  final String icon, title, date, price;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -104,7 +115,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
                     backgroundColor: const Color(0XffFFFFFF).withOpacity(0.1),
                     radius: 30,
                     child: SvgPicture.asset(
-                      allExpenesesItemModel.icon,
+                      icon,
                       color: const Color(0XffFFFFFF), //DOTO:
                     ),
                   ),
@@ -123,7 +134,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
             FittedBox(
               fit: BoxFit.scaleDown,
               child: Text(
-                allExpenesesItemModel.title,
+                title,
                 style: Appstyles.styleSemiBold16(context: context)
                     .copyWith(color: Colors.white),
               ),
@@ -134,7 +145,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
             FittedBox(
               fit: BoxFit.scaleDown,
               child: Text(
-                allExpenesesItemModel.date,
+                date,
                 style: Appstyles.styleRegular14(context: context)
                     .copyWith(color: Colors.white),
               ),
@@ -145,7 +156,7 @@ class ActiveAllExpensesItem extends StatelessWidget {
             FittedBox(
               fit: BoxFit.scaleDown,
               child: Text(
-                allExpenesesItemModel.price,
+                price,
                 style: Appstyles.styleSemiBold24(context: context)
                     .copyWith(color: Colors.white),
               ),

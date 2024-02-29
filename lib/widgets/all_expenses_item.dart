@@ -4,9 +4,15 @@ import 'package:flutter/material.dart';
 
 class AllExpensesItem extends StatelessWidget {
   const AllExpensesItem(
-      {super.key, required this.allExpenesesItemModel, required this.isActive});
-  final AllExpenesesItemModel allExpenesesItemModel;
+      {super.key,
+      required this.isActive,
+      required this.icon,
+      required this.title,
+      required this.date,
+      required this.price});
+
   final bool isActive;
+  final String icon, title, date, price;
   @override
   Widget build(BuildContext context) {
     return AnimatedCrossFade(
@@ -15,12 +21,23 @@ class AllExpensesItem extends StatelessWidget {
           isActive ? CrossFadeState.showFirst : CrossFadeState.showSecond,
       firstChild: isActive
           ? ActiveAllExpensesItem(
-              allExpenesesItemModel: allExpenesesItemModel,
+              icon: icon,
+              title: title,
+              date: date,
+              price: price,
             )
           : InActiveAllExpensesItem(
-              allExpenesesItemModel: allExpenesesItemModel),
-      secondChild:
-          InActiveAllExpensesItem(allExpenesesItemModel: allExpenesesItemModel),
+              icon: icon,
+              title: title,
+              date: date,
+              price: price,
+            ),
+      secondChild: InActiveAllExpensesItem(
+        icon: icon,
+        title: title,
+        date: date,
+        price: price,
+      ),
     );
   }
 }

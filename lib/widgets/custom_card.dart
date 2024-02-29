@@ -32,31 +32,42 @@ class CustomCard extends StatelessWidget {
               ),
               subtitle: Text(
                 'Syah Bandi',
-                style: Appstyles.styleMeduim20(context: context).copyWith(color: Colors.white),
+                style: Appstyles.styleMeduim20(context: context)
+                    .copyWith(color: Colors.white),
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
             const Spacer(),
             Padding(
-              padding: const EdgeInsets.only(right: 24),
-              child: Text(
-                '0918 8124 0042 8129',
-                style: Appstyles.styleSemiBold24(context: context).copyWith(color: Colors.white),
+              padding: const EdgeInsets.only(right: 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      '0918 8124 0042 8129',
+                      style: Appstyles.styleSemiBold24(context: context)
+                          .copyWith(color: Colors.white),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      '12/20 - 124',
+                      style: Appstyles.styleRegular16(context: context)
+                          .copyWith(color: Colors.white),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 27,
+                  ),
+                ],
               ),
-            ),
-            const SizedBox(
-              height: 12,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 24),
-              child: Text(
-                '12/20 - 124',
-                style: Appstyles.styleRegular16(context: context).copyWith(color: Colors.white),
-              ),
-            ),
-            const SizedBox(
-              height: 27,
-            ),
+            )
           ],
         ),
       ),
